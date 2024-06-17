@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --fs-primary: 1rem;
+    --ff-primary: 'Roboto', sans-serif;
+    --color: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ 
+    
+}
+
+html {
+    font-size: var(--fs-primary);
+    font-family: var(--ff-primary);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: beige;
+
+    line-height: 1.5;
+   
+}
+
+
+
+nav {
+    background-color: rgb(136, 136, 103);
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-navigation a {
+    color: black;
+    text-decoration: none;
+    margin: 2px;
+}
+
+.nav-navigation a:hover {
+    text-decoration: underline;
+}
+
+
+picture img{
+    padding: 1.5rem;
+    border-radius: 4rem;
+}
+.header {
+    display: grid;
+    gap: 1em;
+}
+
+.header-main-cover {
+    text-align: center;
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+}
+
+.header-main-cover button {
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    background: linear-gradient(to left, rgb(136, 136, 103) ,#2b2424 );
+    border-radius: 50px;
+}
+
+.header-main-cover .header-main-cover-desc {
+    padding: 1em;
+}
+
+.header-main-cover .header-main-cover-desc p {
+    font-weight: 500;
+}
+
+
+section div {
+    display: grid;
+    gap:1em;
+}
+
+.section-wrapper .categories {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.section-indian-couisine,
+.section-nigerian-cousine,
+.section-fusion-dishes {
+    margin-bottom: 2em;
+    text-align: center;
+    background-color: rgb(146, 146, 110);
+    border-radius: 5em;
+    padding: 1.5em;
+}
+
+.section-indian-couisine a,
+.section-nigerian-cousine a,
+.section-fusion-dishes a
+ {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.section-indian-couisine a:hover,
+.section-nigerian-cousine a:hover,
+.section-fusion-dishes a:hover
+ {
+    text-decoration: underline;
+}
+
+.section-indian-couisine picture img,
+.section-nigerian-cousine picture img, 
+.section-fusion-dishes picture img {
+    margin: auto;
+}
+footer {
+       background-color: rgb(146, 146, 110);
+       display: flex;
+       padding: 1em;
+       align-items: center;
+       justify-content: space-between;
+}
+
+footer a:first-child {
+    color:  rgb(154, 62, 62);
+}
+/*Did not see a suitable color for the instagram icon  */
+
+footer a:last-child {
+    color: rgb(227, 227, 43);
+}
+
+
+
+
+@media (min-width:720px) {
+    nav {
+        padding: 2rem;
+        font-size: 1.4em;
+    }
+    .header-main-cover {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 2em;
+        padding: 0;
+    }
+
+/*NB - Switch the direction of the two div's in the header section */
+
+    .cuisine-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+    .header-main-cover-desc {
+        margin-top: 1.5em;
+    }
+
+    
+}
+
+
+@media (min-width: 1080px) {
+    nav {
+        padding: 2rem;
+        font-size: 1.9em;
+      
+    }
+
+    .cuisine-sections {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .header-main-cover-desc {
+        margin-top: 4em;
+    }
+
+    .desc-chicken-curry {
+        font-size: 2rem;
+    }
+}
+
